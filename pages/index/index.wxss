@@ -1,0 +1,301 @@
+/* pages/user/user.wxss */
+.bg-w{
+  background: snow;
+ }
+ .th {
+  width: 40%;
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+ }
+.img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 18rpx;
+}
+.section{
+  font-size:28rpx;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+ }
+ .on{display: block}
+ .off{display: none}
+
+
+ .picker{
+  display: inline-flex;
+  padding: 26rpx;
+  background: #E6F3F9;
+  font-size: 36rpx;
+  color: #666;
+  border-radius: 11px;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+}
+.array{
+  font-size: 36rpx;
+  color: #666;
+  
+}
+.arror{
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  right: 100rpx;
+  transform: rotate(45deg);
+  margin-top: 10rpx;
+}
+
+.index-contier {
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  height: 570rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.index-left {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-top: 477rpx;
+  color: #000;
+}
+
+
+.index-center {
+  float: left;
+  width: 40%;
+  text-align: center;
+  margin-top: 240rpx;
+  color: #000;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.index-right {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-top: 477rpx;
+  color: #000;
+}
+
+.index-right image {
+  height: 100%;
+  width: 100%;
+}
+
+.inform {
+  padding: 0 6px;
+  font-size: 30rpx;
+}
+
+#userinfo1 {
+  width: 185rpx;
+  height: 185rpx;
+  /* margin:20rpx; */
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+
+#userinfo2 {
+  font-family: "微软雅黑";
+  font-size: 15px;
+  margin-top: 75rpx;
+  color:#ffffff;
+
+}
+
+/* pages/leftSwiperDel/index.wxss */
+
+view {
+  box-sizing: border-box;
+}
+
+.item-box {
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.items {
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  border-top: 2rpx solid #eee;
+  height: 110rpx;
+  line-height: 120rpx;
+  overflow: hidden;
+}
+
+.item:last-child {
+  border-bottom: 2rpx solid #eee;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+}
+
+.inner.txt {
+  background-color: #fff;
+  width: 100%;
+  z-index: 5;
+  padding: 0 10rpx;
+  transition: left 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inner.del {
+  background-color: #e64340;
+  width: 180rpx;
+  text-align: center;
+  z-index: 4;
+  right: 0;
+  color: #fff;
+}
+
+.item-icon {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+  margin-left: 6px;
+  border-radius: 50%;
+}
+
+.item-data {
+  margin-left: 15%;
+}
+.button {
+  color: #666;
+  background-color: #EEE;
+  border-color: #EEE;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 40px;
+  margin: 0;
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  /*
+  * Disabled State
+  *
+  * The disabled state uses the class .disabled, is-disabled,
+  * and the form attribute disabled="disabled".
+  * The use of !important is only added because this is a state
+  * that must be applied to all buttons when in a disabled state.
+  */ }
+
+  .button:visited {
+    color: #666; }
+  .button:hover, .button:focus {
+    background-color: #f6f6f6;
+    text-decoration: none;
+    outline: none; }
+  .button:active, .button.active, .button.is-active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-color: #cfcfcf;
+    color: #d4d4d4;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .button.disabled, .button.is-disabled, .button:disabled {
+    top: 0 !important;
+    background: #EEE !important;
+    border: 1px solid #DDD !important;
+    text-shadow: 0 1px 1px white !important;
+    color: #CCC !important;
+    cursor: default !important;
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    opacity: .8 !important; }
+
+/*
+* Base Button Tyography
+*
+*/
+
+
+
+  .button-uppercase {
+    text-transform: uppercase; }
+  
+  .button-lowercase {
+    text-transform: lowercase; }
+  
+  .button-capitalize {
+    text-transform: capitalize; }
+  
+  .button-small-caps {
+    font-variant: small-caps; }
+  
+  .button-icon-txt-large {
+    font-size: 36px !important; }
+  
+  /*
+  * Base padding
+  *
+  */
+  .btn-commit {
+    bottom: 20rpx;
+    position: fixed;
+  }
+.button-plain,
+.button-plain-flat {
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #1B9AF7; }
+  .button-plain:visited,
+  .button-plain-flat:visited {
+    color: #1B9AF7; }
+  .button-plain:hover, .button-plain:focus,
+  .button-plain-flat:hover,
+  .button-plain-flat:focus {
+    background-color: white;
+    border-color: white;
+    color: #1B9AF7; }
+  .button-plain:active, .button-plain.active, .button-plain.is-active,
+  .button-plain-flat:active,
+  .button-plain-flat.active,
+  .button-plain-flat.is-active {
+    background-color: white;
+    border-color: white;
+    color: #e6e6e6; }

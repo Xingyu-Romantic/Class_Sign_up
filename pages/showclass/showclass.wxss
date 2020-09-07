@@ -1,0 +1,317 @@
+.movie-list-wrapper {
+  width: 750rpx;
+  height: 1200rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-list {
+  position: fixed;
+  left: 0;
+  margin-top: 20rpx;
+  padding: 0 100rpx;
+  color: #999;
+  height: 1160rpx;
+  width: calc(550rpx*15);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+}
+
+.nav-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 550rpx;
+  height: 1100rpx;
+  background-color: #ffffff;
+  border-radius: 45rpx;
+  box-shadow: 3rpx 3rpx 15rpx 3rpx rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  word-break: break-all;
+}
+
+.active {
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+}
+
+.next,
+.prev {
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.movie-image {
+  width: 480rpx;
+  height: 480rpx;
+  border-radius: 30rpx;
+}
+
+.movie-info {
+  text-align: center;
+  margin: 25rpx;
+  line-height: 1;
+  color: #342158;
+}
+
+.movie-title {
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.movie-title.text-small {
+  font-size: 38rpx;
+}
+
+.btn-commit {
+  bottom: 50rpx;
+  position: fixed;
+}
+.movie-detail {
+  box-sizing: border-box;
+  color: #342158;
+  display: block;
+  width: 350rpx;
+  height: 80rpx;
+  font-size: 35rpx;
+  line-height: 76rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  border: 2rpx solid #342158;
+}
+
+.movie-description-wrapper {
+  margin: auto;
+  width: 550rpx;
+}
+
+.top {
+  padding-top: 8px;
+}
+
+.item-title {
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #342158;
+}
+
+.movie-desciprtion {
+  margin-top: 10rpx;
+  height: 150rpx;
+  font-size: 25rpx;
+  line-height: 2;
+  color: #342158;
+  -webkit-line-clamp: 3;
+  /* 设置超出多少行隐藏 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* 设置 display 为 -webkit-box 或者 -webkit-inline-box 时为隐藏状态 */
+  display: -webkit-inline-box;
+}
+
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #E8E8EA;
+  color: #3CC51F;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+.col-0 {
+  -webkit-box-flex: 0;
+  box-flex: 0;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+
+.input_h30 {
+  height: 30px;
+  line-height: 30px;
+}
+
+.input_h60 {
+  height: 60px;
+}
+
+.input_view {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+  line-height: 30px;
+}
+
+input {
+  font: 12px "microsoft yahei";
+  background: #fff;
+  color: #000;
+}
+
+.button {
+  color: #666;
+  background-color: #EEE;
+  border-color: #EEE;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 40px;
+  margin: 0;
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  /*
+  * Disabled State
+  *
+  * The disabled state uses the class .disabled, is-disabled,
+  * and the form attribute disabled="disabled".
+  * The use of !important is only added because this is a state
+  * that must be applied to all buttons when in a disabled state.
+  */ }
+
+  .button:visited {
+    color: #666; }
+  .button:hover, .button:focus {
+    background-color: #f6f6f6;
+    text-decoration: none;
+    outline: none; }
+  .button:active, .button.active, .button.is-active {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-color: #cfcfcf;
+    color: #d4d4d4;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+  .button.disabled, .button.is-disabled, .button:disabled {
+    top: 0 !important;
+    background: #EEE !important;
+    border: 1px solid #DDD !important;
+    text-shadow: 0 1px 1px white !important;
+    color: #CCC !important;
+    cursor: default !important;
+    appearance: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    opacity: .8 !important; }
+
+/*
+* Base Button Tyography
+*
+*/
+.button-uppercase {
+  text-transform: uppercase; }
+
+.button-lowercase {
+  text-transform: lowercase; }
+
+.button-capitalize {
+  text-transform: capitalize; }
+
+.button-small-caps {
+  font-variant: small-caps; }
+
+.button-icon-txt-large {
+  font-size: 36px !important; }
+
+/*
+* Base padding
+*
+*/
+
+.button-plain,
+.button-plain-flat {
+  text-align: center;
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #1B9AF7; }
+  .button-plain:visited,
+  .button-plain-flat:visited {
+    color: #1B9AF7; }
+  .button-plain:hover, .button-plain:focus,
+  .button-plain-flat:hover,
+  .button-plain-flat:focus {
+    background-color: white;
+    border-color: white;
+    color: #1B9AF7; }
+  .button-plain:active, .button-plain.active, .button-plain.is-active,
+  .button-plain-flat:active,
+  .button-plain-flat.active,
+  .button-plain-flat.is-active {
+    background-color: white;
+    border-color: white;
+    color: #e6e6e6; }

@@ -1,0 +1,19 @@
+
+<view class="container">
+  <view class="bg-fff p-lr30 border-t">
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">教师姓名</label>
+      <input type="text" class="ml40 flex1" placeholder="请输入姓名" bindinput="getNameValue"></input>
+    </view>
+    
+     <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">手机号码</label>
+      <input type="text" class="ml40 flex1" maxlength="11" placeholder="请输入手机号码" bindinput="getPhoneValue"></input>
+    </view>
+  </view>
+ 
+ 
+  <view class="combtn font16 color-fff _w100 bg-btn" data-url="../addNewAddress/addNewAddress" bindtap="saveNewAddress">
+    保存
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="bak">
+<view class='index-contier'>
+  <view class="index-center">
+    <view class="logo">
+      <open-data type="userAvatarUrl" class="userinfo" id="userinfo1"></open-data>
+    </view>
+    <view id="userinfo2">
+      <open-data type="userNickName" class="userinfo"></open-data>
+    </view>
+  </view> 
+</view>
+
+
+  <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <label>选择签到班级：</label>
+      <view class= "array" >{{array[index]}} </view>
+      <view class= "arror"></view>
+    </view>
+  </picker>
+  </view>
+
+
+  </view>

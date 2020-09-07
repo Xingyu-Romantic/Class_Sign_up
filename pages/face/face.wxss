@@ -1,0 +1,11 @@
+.record{
+  position: fixed;
+  bottom: 50vh;
+  right: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto;
+  border-radius: 50%;
+  background-color: rgb(79, 250, 11);   /*按钮透明*/  
+  border: 1px solid grey			/*设置按钮边框*/
+}

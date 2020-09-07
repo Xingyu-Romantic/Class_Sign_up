@@ -1,0 +1,36 @@
+<!--pages/signdata.wxml-->
+<view>
+<view class="title">班级名称：{{class_name}}</view>
+<view class="type">班级ID：{{class_id}}</view>
+<view class="table">
+ <view class="tr bg-w">
+ <view class="th">学号</view>
+ <view class="th">姓名</view>
+ <view class="th">备注</view>
+ </view>
+ <block wx:for="{{signdata}}" wx:key="signdata">
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item[1]}}</view>
+ <view class="td">{{item[0]}}</view>
+ <view class="td">"已签到"</view>
+ </view>
+ <view class="tr" wx:else>
+ <view class="td">{{item[1]}}</view>
+ <view class="td">{{item[0]}}</view>
+ <view class="td">"已签到"</view>
+ </view>
+ </block>
+ <block wx:for="{{unsigndata}}" wx:key="unsigndata">
+ <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+ <view class="td">{{item[1]}}</view>
+ <view class="td">{{item[0]}}</view>
+ <view class="td">"已签到"</view>
+ </view>
+ <view class="tr" wx:else>
+ <view class="td">{{item[1]}}</view>
+ <view class="td">{{item[0]}}</view>
+ <view class="td">"已签到"</view>
+ </view>
+ </block>
+</view>
+</view>

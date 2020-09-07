@@ -1,0 +1,21 @@
+<view class='movie-list-wrapper'>
+  <view x-scroll='false' class="movie-list" style='transform: translateX( {{movieDistance}}rpx)' bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+
+    <view class="nav-item {{classArray[index] ? classArray[index] : ''}}" wx:for="{{face_list}}" wx:key="face_list" data-index="{{index}}">
+      <image class='movie-image' src='data:image/jpeg;base64,{{item.data}}' mode='aspectFill'></image>
+     <form bindsubmit="submitform">
+      <view class="top grid">  
+      <label class="title col-0">姓名</label>  
+      <input class="input_base input_h30 col-1" type='text' name="stu_name" placeholder="例：张三" bindinput="Name_input" data-id="{{index}}"></input>  
+      </view>  
+    <view class="top grid">  
+      <label class="title col-0">学号</label>  
+      <input class="input_base input_h30 col-1" type='text' name="stu_id" placeholder="例：19251522222" bindinput="Id_input" data-id="{{index}}"></input>  
+    </view>  
+      </form>
+    </view>
+  </view>
+  <view wx:if="{{commitbool}}" style="text-align: center" class="btn-commit">
+      <button class="button button-plain" bindtap="commit_info">提交</button>
+    </view>
+</view>

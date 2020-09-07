@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  
+  <!--外层容器用于定位 -->
+<view class='movie-list-wrapper'>
+    <!--用于存放卡片的容器 -->
+    <view x-scroll='false' class="movie-list" style='transform: translateX( {{movieDistance}}rpx)' bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+        <!--若干卡片，信息展示 -->
+        <view class="nav-item {{classArray[index] ? classArray[index] : ''}}" wx:for="{{movieData}}" wx:key="movieData" data-index="{{index}}">
+            <view class='movie-info'>
+                <view class='movie-title {{item.title.length>9 ? "text-small" : ""}}'>{{item.class_name}}                </view>
+                <view class='movie-type'>{{item.class_id}}</view>
+            </view>
+            <view class='movie-detail' bindtap='powerDrawer' data-id='{{item.id}}' data-statu="open" data-btn-name="{{item.button_name}}" >{{item.button_name}}</view>
+        </view>
+    </view>
+
+  <view class="drawer_screen" bindtap="powerDrawer" data-id='1' data-statu="close" wx:if="{{showModalStatus}}"></view>  
+<!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+   
+  <view class="drawer_title">添加班级</view>  
+   <form bindsubmit="submitform">
+  <view class="drawer_content">
+         
+    <view class="top grid">  
+      <label class="title col-0">课程ID</label>  
+      <input class="input_base input_h30 col-1" type='text' name="class_id" placeholder="例：ABCD-63663" bindinput="class_id_input"></input>  
+    </view>  
+    <view class="top grid">  
+      <label class="title col-0">课程名称</label>  
+      <input class="input_base input_h30 col-1" type='text' name="class_name" placeholder="例：高等数学" bindinput="class_name_input"></input>  
+    </view>  
+    
+  </view>  
+  <view><button class="btn_ok" bindtap='naivgatetoface' data-statu="close" form-type='submit'>确定</button></view>
+  
+  </form>
+  </view>
+  
+  
+</view>
+
+</view>
